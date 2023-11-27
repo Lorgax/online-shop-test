@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { products } from "../api/products.json";
 import { ProductItems } from "./ProductItems";
+import { SearchBar } from "./SearchBar";
 
 export const Products = () => {
 
@@ -9,6 +10,7 @@ export const Products = () => {
 
   return (
     <>
+      <SearchBar />
       <section className="container products-list">
         <h4 className="fw-bold text-center mt-4">Resultados de búsqueda de "{search}": {productsFiltered.length}</h4>
         {

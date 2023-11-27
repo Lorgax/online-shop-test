@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useMemo } from "react";
 import { getProductById } from "../helpers";
+import { SearchBar } from "./SearchBar";
 
 export const InfoProduct = () => {
 
@@ -9,6 +10,7 @@ export const InfoProduct = () => {
 
   return (
     <>
+      <SearchBar />
       <section className="info-product container text-center my-5">
         <div className="row justify-content-center align-items-center">
           <div className="col-8 col-md-12">
