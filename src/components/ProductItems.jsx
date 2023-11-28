@@ -12,7 +12,7 @@ export const ProductItems = ({ product }) => {
             <h3 className="fw-bold">{product.title}</h3>
             <p className="product-descr">{product.description}</p>
             <span className="fw-bold">{product.price}$ - {getRating(Math.floor(product.rating))}</span>
-            <Link to={`/items/${product.id}`} className="btn btn-warning me-auto fw-bold mt-3">Ver producto</Link>
+            <Link to={`/items/${product.id}`} className="btn btn-warning me-auto fw-bold mt-3">See product</Link>
           </div>
         </div>
       </li>

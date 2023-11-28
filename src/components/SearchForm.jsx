@@ -28,7 +28,7 @@ export const SearchForm = () => {
     <>
       <form onSubmit={handleSearch} className="text-center">
         <input onChange={onInputChange} className="form-control" type="text" name="searchText" value={searchText} placeholder="Smartphones, laptops, ..." />
-        <button type="submit" className={location.pathname == "/" ? "btn btn-warning fw-bold mt-3" : "d-none"}>Buscar</button>
+        <button type="submit" className={location.pathname == "/" ? "btn btn-warning fw-bold mt-3" : "d-none"}>Search</button>
       </form>
     </>
   )
