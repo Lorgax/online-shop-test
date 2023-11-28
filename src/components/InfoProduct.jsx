@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useMemo } from "react";
-import { getProductById } from "../helpers";
+import { getProductById, getRating } from "../helpers";
 import { SearchBar } from "./SearchBar";
 
 export const InfoProduct = () => {
@@ -21,9 +21,12 @@ export const InfoProduct = () => {
           </div>
           <div className="col-12">
             <h2 className="fw-bold mb-4">{product.title}</h2>
-            <div className="d-flex justify-content-around align-items-center">
-              <h5>{product.price}$</h5>
-              <span>{product.rating}★</span>
+            <div className="d-flex justify-content-center ">
+              <div>
+                <h5 className="mb-0 me-3 fw-bold">{product.price}$</h5>
+                <span className="fw-bold">{product.stock} availables</span>
+              </div>
+              <span>{getRating(Math.floor(product.rating))}</span>
             </div>
             <p>{product.description}</p>
           </div>

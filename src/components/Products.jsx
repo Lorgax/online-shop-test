@@ -15,8 +15,8 @@ export const Products = () => {
         <h4 className="fw-bold text-center mt-4">Resultados de búsqueda de "{search}": {productsFiltered.length}</h4>
         {
           productsFiltered.map(product => (
-            <span className="badge text-bg-warning mx-2">
-              {product.category}
+            <span key={product.id} className="badge text-bg-warning mx-2">
+              {product.category} - {product.category.count}
             </span>))
         }
         <ul>

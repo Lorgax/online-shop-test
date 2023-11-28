@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getRating } from "../helpers";
 
 export const ProductItems = ({ product }) => {
 
@@ -9,9 +10,9 @@ export const ProductItems = ({ product }) => {
           <img src={product.thumbnail} className="product-list-img me-3" alt={product.title} />
           <div className="info-product-list d-flex flex-column justify-content-center">
             <h3 className="fw-bold">{product.title}</h3>
-            <p>{product.description}</p>
-            <span className="fw-bold">{product.price}$ - {product.rating}★</span>
-            <Link to={`/items/${product.id}`} className="btn btn-warning fw-bold w-25 mt-3">Ver producto</Link>
+            <p className="product-descr">{product.description}</p>
+            <span className="fw-bold">{product.price}$ - {getRating(Math.floor(product.rating))}</span>
+            <Link to={`/items/${product.id}`} className="btn btn-warning me-auto fw-bold mt-3">Ver producto</Link>
           </div>
         </div>
       </li>

@@ -6,7 +6,9 @@ export const SearchBar = () => {
     <>
       <nav className="navbar">
         <div className="container-fluid d-flex align-items-center justify-content-around">
-          <Link className="navbar-brand" to="/">Navbar</Link>
+          <Link className="navbar-brand" to="/">
+            <img className="logo" src="/src/assets/logo.png" alt="Logo principal" />
+          </Link>
           <SearchForm />
         </div>
       </nav>
